@@ -1,247 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuj Suryawanshi</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Anuj Suryawanshi — Data Science × Analytics × AI</title>
+  <meta name="description" content="Anuj Suryawanshi is a 3rd-year BCA Data Science student (minor in Data Analytics) and Data Analyst Intern at Unified Mentor, exploring neural networks. Projects in logistics analytics and maternal health risk assessment.">
+  <meta name="theme-color" content="#06070A">
+  <meta name="author" content="Anuj Suryawanshi">
+  <link rel="canonical" href="https://suryawanshianuj83-crypto.github.io/Portfolio/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anuj Suryawanshi — Data Science × Analytics × AI">
+  <meta property="og:description" content="BCA Data Science student, Data Analyst Intern and neural-network explorer. Shipping analytics, dashboards and an ML health-risk prototype.">
+  <meta property="og:url" content="https://suryawanshianuj83-crypto.github.io/Portfolio/">
+  <meta property="og:image" content="https://suryawanshianuj83-crypto.github.io/Portfolio/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anuj Suryawanshi — Data Science × Analytics × AI">
+  <meta name="twitter:description" content="BCA Data Science student, Data Analyst Intern and neural-network explorer.">
+  <meta name="twitter:image" content="https://suryawanshianuj83-crypto.github.io/Portfolio/assets/og.png">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306070A'/%3E%3Cpath d='M14 46 32 14l18 32' fill='none' stroke='%235B8CFF' stroke-width='5' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='14' r='4.5' fill='%2346DDEB'/%3E%3Ccircle cx='14' cy='46' r='4.5' fill='%23EDEBE5'/%3E%3Ccircle cx='50' cy='46' r='4.5' fill='%239277FF'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    /* Failsafe: if scripts fail to load, never leave the entrance curtain up */
+    setTimeout(function () { document.documentElement.classList.add('ready'); }, 5000);
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anuj Suryawanshi",
+    "url": "https://suryawanshianuj83-crypto.github.io/Portfolio/",
+    "jobTitle": "Data Analyst Intern",
+    "worksFor": { "@type": "Organization", "name": "Unified Mentor Private Limited" },
+    "sameAs": [
+      "https://github.com/suryawanshianuj83-crypto",
+      "https://www.linkedin.com/in/anuj-suryawanshi-263a70416"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <!-- Animated Background Mesh -->
-    <div class="bg-mesh" id="bgMesh">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        <!-- Particles Container for AI effect -->
-        <div id="particles-container"></div>
-    </div>
+  <!-- Page entrance -->
+  <div class="curtain" id="curtain" aria-hidden="true">
+    <span class="curtain__mark">AS</span>
+    <span class="curtain__line"></span>
+  </div>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="logo">ANUJ <span>SURYAWANSHI</span></a>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact" class="nav-btn">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <nav class="nav__bar" aria-label="Primary">
+      <a class="nav__brand" href="#home" aria-label="Anuj Suryawanshi, back to top">
+        <span class="nav__mark" aria-hidden="true">AS</span>
+        <span class="nav__name">Anuj Suryawanshi</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home" data-link="home">Home</a></li>
+        <li><a href="#about" data-link="about">About</a></li>
+        <li><a href="#experience" data-link="experience">Experience</a></li>
+        <li><a href="#research" data-link="research">Research</a></li>
+        <li><a href="#skills" data-link="skills">Skills</a></li>
+        <li><a href="#projects" data-link="projects">Projects</a></li>
+        <li><a href="#education" data-link="education">Education</a></li>
+        <li><a href="#contact" data-link="contact">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
     </nav>
+  </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu">
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+  <div class="menu" id="menu">
+    <ul class="menu__links">
+      <li><a href="#home" data-link="home">Home</a></li>
+      <li><a href="#about" data-link="about">About</a></li>
+      <li><a href="#experience" data-link="experience">Experience</a></li>
+      <li><a href="#research" data-link="research">Research</a></li>
+      <li><a href="#skills" data-link="skills">Skills</a></li>
+      <li><a href="#projects" data-link="projects">Projects</a></li>
+      <li><a href="#education" data-link="education">Education</a></li>
+      <li><a href="#contact" data-link="contact">Contact</a></li>
+    </ul>
+    <p class="menu__foot">Data Science × Analytics × AI</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" data-nav="home" aria-label="Introduction">
+      <canvas class="hero__field" id="field" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+
+      <div class="hero__inner" id="heroInner">
+        <h1 class="hero__title" aria-label="Anuj Suryawanshi">
+          <span class="line" data-split aria-hidden="true">ANUJ</span>
+          <span class="line" data-split aria-hidden="true">SURYAWANSHI</span>
+        </h1>
+
+        <p class="hero__tag" data-enter style="--d:.9s">Data Science <span class="x">×</span> Analytics <span class="x">×</span> AI</p>
+
+        <div class="hero__row">
+          <p class="hero__lede" data-enter style="--d:1.05s">3rd-year BCA Data Science student with a minor in Data Analytics, currently working as a Data Analyst Intern and exploring neural networks.</p>
+          <div class="hero__cta" data-enter style="--d:1.2s">
+            <a class="btn btn--primary magnetic" href="#projects"><span class="btn__in">View my work <span class="arr" aria-hidden="true">→</span></span></a>
+            <a class="btn btn--ghost magnetic" href="https://github.com/suryawanshianuj83-crypto" target="_blank" rel="noopener noreferrer"><span class="btn__in">GitHub <span class="arr" aria-hidden="true">↗</span></span></a>
+          </div>
+        </div>
+
+        <ul class="hero__status" aria-label="Current status" data-enter style="--d:1.35s">
+          <li class="stat">
+            <span class="dot dot--live" aria-hidden="true"></span>
+            <div><p class="stat__k">Currently working</p><p class="stat__v">Data Analyst Intern @ Unified Mentor</p></div>
+          </li>
+          <li class="stat">
+            <span class="dot dot--ring" aria-hidden="true"></span>
+            <div><p class="stat__k">Exploring</p><p class="stat__v">Neural Networks</p></div>
+          </li>
         </ul>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to About" data-enter style="--d:1.5s">
+        <span class="hero__scroll-label">Scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" data-nav="about" aria-labelledby="about-h">
+      <div class="wrap about__grid">
+        <div class="about__main">
+          <h2 class="label-h" id="about-h">Who I am</h2>
+          <p class="statement" id="statement">I work where data, technology and curiosity meet.</p>
+          <div class="about__cols">
+            <p class="about__copy" data-reveal>I'm a 3rd-year BCA Data Science student with a minor in Data Analytics. Alongside academics, I'm gaining practical experience as a Data Analyst Intern at Unified Mentor while exploring neural networks through research, experimentation and implementation.</p>
+            <ul class="about__verbs" data-reveal aria-label="How I work">
+              <li>I learn.</li>
+              <li>I analyze.</li>
+              <li>I build.</li>
+              <li>I experiment.</li>
+              <li>I go deeper.</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="portrait" data-reveal>
+          <div class="portrait__frame" data-tilt>
+            <picture>
+              <source srcset="assets/anuj.webp" type="image/webp">
+              <img src="assets/anuj.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Portrait of Anuj Suryawanshi seated with arms crossed in front of a round window">
+            </picture>
+            <span class="portrait__corner portrait__corner--tl" aria-hidden="true"></span>
+            <span class="portrait__corner portrait__corner--br" aria-hidden="true"></span>
+          </div>
+          <figcaption><span>Anuj Suryawanshi</span><span>BCA Data Science &middot; MIT-ADT University</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience" data-nav="experience" aria-labelledby="exp-h">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 class="display" id="exp-h">Experience</h2>
+          <p class="section__sub">Two internships, one direction of study. Open a role to see what the work involved.</p>
+        </header>
+
+        <div class="trail" id="trail" role="group" aria-label="Areas of work, from web development to AI">
+          <ol class="trail__list">
+            <li class="trail__node" style="--i:0"><span class="trail__dot" aria-hidden="true"></span><span class="trail__t">Web development</span></li>
+            <li class="trail__node" style="--i:1"><span class="trail__dot" aria-hidden="true"></span><span class="trail__t">Databases</span></li>
+            <li class="trail__node" style="--i:2"><span class="trail__dot" aria-hidden="true"></span><span class="trail__t">Data analytics</span></li>
+            <li class="trail__node" style="--i:3"><span class="trail__dot" aria-hidden="true"></span><span class="trail__t">Data science</span></li>
+            <li class="trail__node" style="--i:4"><span class="trail__dot" aria-hidden="true"></span><span class="trail__t">AI / Neural networks</span></li>
+          </ol>
+          <p class="trail__note">A map of the areas I've worked in and am moving toward — not a straight line from one role to the next.</p>
+        </div>
+
+        <ol class="timeline" id="timeline">
+          <li class="tl" data-tl>
+            <span class="tl__node" aria-hidden="true"></span>
+            <button class="tl__head" type="button" aria-expanded="false" aria-controls="tl-1">
+              <span class="tl__no">01</span>
+              <span class="tl__titles">
+                <span class="tl__role">Software Engineer Intern</span>
+                <span class="tl__org">IndiaTechSoft (ITS)</span>
+              </span>
+              <span class="tl__badge">Previous internship</span>
+              <span class="tl__chev" aria-hidden="true"></span>
+            </button>
+            <div class="tl__panel" id="tl-1">
+              <div class="tl__inner">
+                <ul class="tl__list">
+                  <li>Practiced CRUD (Create, Read, Update, Delete) operations and database interaction using SQL.</li>
+                  <li>Built responsive multi-page websites using HTML, CSS, JavaScript and Bootstrap as part of internship assignments.</li>
+                  <li>Developed a database-connected web page that captures and stores user information: name, email, phone, subject and message.</li>
+                  <li>Gained hands-on experience with form handling, SQL database integration and storing submitted data.</li>
+                  <li>Worked on practical web development tasks involving frontend design and backend database connectivity.</li>
+                </ul>
+                <ul class="chips" aria-label="Technologies">
+                  <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li><li>SQL</li><li>CRUD</li><li>Database integration</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl" data-tl data-open>
+            <span class="tl__node" aria-hidden="true"></span>
+            <button class="tl__head" type="button" aria-expanded="true" aria-controls="tl-2">
+              <span class="tl__no">02</span>
+              <span class="tl__titles">
+                <span class="tl__role">Data Analyst Intern</span>
+                <span class="tl__org">Unified Mentor Private Limited</span>
+              </span>
+              <span class="tl__badge tl__badge--live"><span class="dot dot--live" aria-hidden="true"></span>Currently working</span>
+              <span class="tl__chev" aria-hidden="true"></span>
+            </button>
+            <div class="tl__panel" id="tl-2">
+              <div class="tl__inner">
+                <p class="tl__lead">Current role. Work areas include:</p>
+                <ul class="tl__grid">
+                  <li>Data cleaning</li>
+                  <li>Data validation</li>
+                  <li>Data preprocessing</li>
+                  <li>Exploratory data analysis</li>
+                  <li>Data visualization</li>
+                  <li>KPI development</li>
+                  <li>Interactive dashboards</li>
+                  <li>Trend analysis</li>
+                  <li>Reporting</li>
+                </ul>
+                <ul class="chips" aria-label="Technologies">
+                  <li>Python</li><li>Data analytics</li><li>Pandas</li><li>Visualization</li><li>Streamlit</li>
+                </ul>
+                <a class="link-arrow" href="#case-study">See the shipping analytics project <span aria-hidden="true">↓</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl" data-tl>
+            <span class="tl__node" aria-hidden="true"></span>
+            <button class="tl__head" type="button" aria-expanded="false" aria-controls="tl-3">
+              <span class="tl__no">03</span>
+              <span class="tl__titles">
+                <span class="tl__role">Current exploration</span>
+                <span class="tl__org">Self-directed study</span>
+              </span>
+              <span class="tl__badge">Ongoing</span>
+              <span class="tl__chev" aria-hidden="true"></span>
+            </button>
+            <div class="tl__panel" id="tl-3">
+              <div class="tl__inner">
+                <p class="tl__lead">Going deeper into how models learn, alongside my degree.</p>
+                <ul class="chips" aria-label="Focus areas">
+                  <li>Data science</li><li>Machine learning</li><li>Neural networks</li><li>AI</li>
+                </ul>
+                <a class="link-arrow" href="#research">See the neural network exploration <span aria-hidden="true">↓</span></a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CASE STUDY ============ -->
+    <section class="story" id="case-study" data-nav="experience" aria-labelledby="cs-h">
+      <div class="wrap story__intro">
+        <p class="story__kicker">Featured internship project</p>
+        <h2 class="display display--md" id="cs-h">Turning Shipping Data into Route-Level Insights</h2>
+        <p class="story__context">I recently worked on a project with Unified Mentor analyzing factory-to-customer shipping performance for Nassau Candy Distributor.</p>
+        <p class="story__disclaimer">An internship analysis project — not a role in the company's logistics operations.</p>
+      </div>
+
+      <div class="story__track" id="storyTrack">
+        <div class="story__stage" id="storyStage" data-step="0">
+          <div class="story__text">
+            <p class="story__count" aria-hidden="true"><span id="stepNow">01</span> / 07</p>
+            <p class="story__num" id="stepNum" aria-hidden="true">10,000+</p>
+            <h3 class="story__title" id="stepTitle" aria-hidden="true">Orders</h3>
+            <p class="story__desc" id="stepDesc" aria-hidden="true">Over 10,000 order records from factory-to-customer shipments are where the analysis starts.</p>
+            <div class="story__dots" id="stepDots" role="group" aria-label="Jump to a step"></div>
+          </div>
+
+          <div class="story__viz" id="storyViz">
+            <svg id="storySvg" class="story__svg" role="img" aria-label="Abstract diagram: orders are cleaned, mapped to factories, routed to states and customers, analysed with KPIs, and shown in a dashboard." focusable="false"></svg>
+            <div class="viz__kpis" data-from="4" aria-hidden="true">
+              <span>Average lead time</span><span>Route volume</span><span>Delay frequency</span><span>Route efficiency score</span>
+            </div>
+            <div class="dash" data-from="6" aria-hidden="true">
+              <div class="dash__bar"><i></i><i></i><i></i><b>Filters</b></div>
+              <div class="dash__kpis"><div><em>Average lead time</em><i></i></div><div><em>Route volume</em><i></i></div><div><em>Delay frequency</em><i></i></div><div><em>Route efficiency score</em><i></i></div></div>
+              <div class="dash__main">
+                <div class="dash__map"><em>US map</em><svg viewBox="0 0 200 100" aria-hidden="true"></svg></div>
+                <div class="dash__table"><em>Route drill-down</em><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <p class="viz__note">Abstract representation. Not actual route or geographic data.</p>
+          </div>
+
+          <ol class="sr-only">
+            <li>10,000+ orders: over 10,000 order records are the starting point.</li>
+            <li>Clean and validate: cleaned and validated 10,000+ order records.</li>
+            <li>5 factories: mapped products to 5 factories.</li>
+            <li>196 routes: analyzed 196 shipping routes.</li>
+            <li>KPI analysis: built average lead time, route volume, delay frequency and route efficiency score.</li>
+            <li>Bottleneck detection: compared ship modes and flagged regional bottlenecks.</li>
+            <li>Interactive dashboard: Streamlit dashboard with filters, US map, route drill-downs and KPI views.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="wrap story__after">
+        <figure class="insight" data-reveal>
+          <blockquote>Without route-level visibility, logistics decisions stay reactive.</blockquote>
+          <figcaption>Breaking performance down by factory, state, and ship mode shows where to act first.</figcaption>
+        </figure>
+
+        <div class="did" data-reveal>
+          <h3 class="did__h">What I did</h3>
+          <dl class="did__list">
+            <div><dt>Data cleaning</dt><dd>Cleaned and validated 10,000+ order records.</dd></div>
+            <div><dt>Route mapping</dt><dd>Mapped products to 5 factories and analyzed 196 shipping routes.</dd></div>
+            <div><dt>KPI development</dt><dd>Built average lead time, route volume, delay frequency and a route efficiency score.</dd></div>
+            <div><dt>Shipping analysis</dt><dd>Compared ship modes and flagged regional bottlenecks.</dd></div>
+            <div><dt>Dashboard</dt><dd>Built an interactive Streamlit dashboard with filters, a US map, route drill-downs and KPI views.</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Plotly</li><li>Streamlit</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="section research" id="research" data-nav="research" aria-labelledby="res-h">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 class="display" id="res-h">Research / Exploration</h2>
+          <p class="section__sub">Self-directed study and experiments — not published research.</p>
+        </header>
+
+        <div class="research__grid">
+          <div class="research__copy">
+            <h3 class="display display--sm">Neural networks</h3>
+            <p class="research__lead">Exploring the foundations and behavior of neural networks through study, experimentation and implementation.</p>
+
+            <div class="topics" role="group" aria-label="Topics. Select one to see it in the network.">
+              <button type="button" class="topic is-active" data-mode="neurons" aria-pressed="true">Neurons</button>
+              <button type="button" class="topic" data-mode="activation" aria-pressed="false">Activation functions</button>
+              <button type="button" class="topic" data-mode="forward" aria-pressed="false">Forward propagation</button>
+              <button type="button" class="topic" data-mode="backprop" aria-pressed="false">Backpropagation</button>
+              <button type="button" class="topic" data-mode="loss" aria-pressed="false">Loss functions</button>
+              <button type="button" class="topic" data-mode="optimization" aria-pressed="false">Optimization</button>
+              <button type="button" class="topic" data-mode="architecture" aria-pressed="false">Model architecture</button>
+            </div>
+            <p class="topic-info" id="topicInfo" aria-live="polite"></p>
+          </div>
+
+          <div class="research__viz">
+            <div class="net" id="netWrap">
+              <canvas id="net" role="img" aria-label="Animated diagram of a neural network with an input layer, two hidden layers and an output layer."></canvas>
+            </div>
+            <div class="net__labels" aria-hidden="true"><span>Input</span><span>Hidden layer</span><span>Hidden layer</span><span>Output</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills" data-nav="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 class="display" id="skills-h">Skills</h2>
+          <p class="section__sub">Hover, focus or tap a skill to see what it connects to.</p>
+        </header>
+
+        <div class="constellation" id="constellation">
+          <svg class="sk-lines" id="skLines" aria-hidden="true" focusable="false"></svg>
+
+          <div class="sk-group">
+            <h3>Data analytics</h3>
+            <div class="sk-items">
+              <button type="button" class="sk" data-id="py">Python</button>
+              <button type="button" class="sk" data-id="pandas">Pandas</button>
+              <button type="button" class="sk" data-id="sql">SQL</button>
+              <button type="button" class="sk" data-id="pbi">Power BI</button>
+              <button type="button" class="sk" data-id="viz">Data visualization</button>
+              <button type="button" class="sk" data-id="clean">Data cleaning</button>
+              <button type="button" class="sk" data-id="prep">Data preprocessing</button>
+            </div>
+          </div>
+
+          <div class="sk-group">
+            <h3>AI / Machine learning</h3>
+            <div class="sk-items">
+              <button type="button" class="sk" data-id="ml">Machine learning</button>
+              <button type="button" class="sk" data-id="ai">Artificial intelligence</button>
+              <button type="button" class="sk" data-id="nn">Neural networks</button>
+              <button type="button" class="sk" data-id="dl">Deep learning</button>
+            </div>
+          </div>
+
+          <div class="sk-group">
+            <h3>Development</h3>
+            <div class="sk-items">
+              <button type="button" class="sk" data-id="flask">Python Flask</button>
+              <button type="button" class="sk" data-id="js">JavaScript</button>
+              <button type="button" class="sk" data-id="html">HTML</button>
+              <button type="button" class="sk" data-id="css">CSS</button>
+              <button type="button" class="sk" data-id="bs">Bootstrap</button>
+            </div>
+          </div>
+
+          <div class="sk-group">
+            <h3>Data / web tools</h3>
+            <div class="sk-items">
+              <button type="button" class="sk" data-id="st">Streamlit</button>
+              <button type="button" class="sk" data-id="plotly">Plotly</button>
+              <button type="button" class="sk" data-id="git">Git</button>
+              <button type="button" class="sk" data-id="gh">GitHub</button>
+              <button type="button" class="sk" data-id="docker">Docker</button>
+              <button type="button" class="sk" data-id="vsc">VS Code</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sk-info" aria-live="polite">
+          <p class="sk-info__name" id="skName">Select a skill</p>
+          <p class="sk-info__desc" id="skDesc">Connections light up between skills that I use together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects" data-nav="projects" aria-labelledby="proj-h">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 class="display" id="proj-h">Projects</h2>
+          <p class="section__sub">One internship case study and one prototype I built myself.</p>
+        </header>
+
+        <div class="pgrid">
+          <article class="pcard" data-tilt>
+            <div class="pcard__visual" aria-hidden="true">
+              <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+                <g fill="none" stroke="rgba(91,140,255,.45)" stroke-width="1">
+                  <path d="M50 40 C150 40 150 30 250 30 S330 60 350 60"/>
+                  <path d="M50 40 C150 50 160 90 250 90 S330 110 350 110"/>
+                  <path d="M50 90 C140 90 150 70 250 70 S330 60 350 60"/>
+                  <path d="M50 90 C140 100 160 130 250 130 S330 150 350 150"/>
+                  <path d="M50 140 C150 140 160 110 250 110 S330 110 350 110"/>
+                  <path d="M50 140 C140 150 160 170 250 170 S330 190 350 190"/>
+                  <path d="M50 190 C150 190 160 150 250 150 S330 150 350 150"/>
+                  <path d="M50 190 C150 195 170 190 250 190 S330 190 350 190"/>
+                </g>
+                <g fill="#EDEBE5"><circle cx="50" cy="40" r="5"/><circle cx="50" cy="90" r="5"/><circle cx="50" cy="140" r="5"/><circle cx="50" cy="190" r="5"/></g>
+                <g fill="#46DDEB"><circle cx="250" cy="30" r="3"/><circle cx="250" cy="70" r="3"/><circle cx="250" cy="90" r="3"/><circle cx="250" cy="110" r="3"/><circle cx="250" cy="130" r="3"/><circle cx="250" cy="150" r="3"/><circle cx="250" cy="170" r="3"/><circle cx="250" cy="190" r="3"/></g>
+                <g fill="#9277FF"><circle cx="350" cy="60" r="4"/><circle cx="350" cy="110" r="4"/><circle cx="350" cy="150" r="4"/><circle cx="350" cy="190" r="4"/></g>
+              </svg>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__meta"><span class="pcard__num">01</span><span class="pcard__cat">Data analytics / logistics intelligence</span></p>
+              <h3 class="pcard__title">Turning Shipping Data into Route-Level Insights</h3>
+              <p class="pcard__desc">Analyzed 10,000+ shipping records to uncover route-level performance patterns across factories, states and ship modes.</p>
+              <ul class="chips" aria-label="Technology"><li>Python</li><li>Pandas</li><li>Plotly</li><li>Streamlit</li></ul>
+              <div class="pcard__more"><span>Internship project</span><span>Unified Mentor</span></div>
+              <div class="pcard__actions">
+                <a class="link-arrow" href="#case-study">View case study <span class="arr" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pcard" data-tilt>
+            <div class="pcard__visual" aria-hidden="true">
+              <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+                <rect x="70" y="24" width="260" height="172" rx="10" fill="rgba(255,255,255,.03)" stroke="rgba(237,235,229,.18)"/>
+                <g fill="rgba(237,235,229,.12)">
+                  <rect x="90" y="48" width="100" height="14" rx="4"/><rect x="210" y="48" width="100" height="14" rx="4"/>
+                  <rect x="90" y="72" width="100" height="14" rx="4"/><rect x="210" y="72" width="100" height="14" rx="4"/>
+                  <rect x="90" y="96" width="100" height="14" rx="4"/><rect x="210" y="96" width="100" height="14" rx="4"/>
+                </g>
+                <rect x="90" y="124" width="220" height="18" rx="9" fill="rgba(91,140,255,.55)"/>
+                <g>
+                  <rect x="90" y="154" width="68" height="26" rx="6" fill="rgba(70,221,235,.18)" stroke="rgba(70,221,235,.6)"/>
+                  <rect x="166" y="154" width="68" height="26" rx="6" fill="rgba(255,255,255,.03)" stroke="rgba(237,235,229,.2)"/>
+                  <rect x="242" y="154" width="68" height="26" rx="6" fill="rgba(255,255,255,.03)" stroke="rgba(237,235,229,.2)"/>
+                </g>
+              </svg>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__meta"><span class="pcard__num">02</span><span class="pcard__cat">Machine learning / health prototype</span></p>
+              <h3 class="pcard__title">Maatri.ai</h3>
+              <p class="pcard__desc">An AI-assisted maternal health risk assessment web application prototype designed to support risk identification and healthcare workflows.</p>
+              <ul class="chips" aria-label="Technology"><li>Python</li><li>Flask</li><li>Machine learning</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="pcard__more"><span>Prototype</span><span>Educational use</span></div>
+              <div class="pcard__actions">
+                <a class="link-arrow" href="#maatri">Project walkthrough <span class="arr" aria-hidden="true">→</span></a>
+                <a class="link-arrow" href="https://github.com/suryawanshianuj83-crypto/maatri.ai" target="_blank" rel="noopener noreferrer">GitHub <span class="arr" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Maatri walkthrough -->
+        <div class="maatri" id="maatri">
+          <header class="maatri__head">
+            <h3 class="display display--sm">Maatri.ai</h3>
+            <p>A prototype for maternal health risk assessment.</p>
+          </header>
+
+          <div class="maatri__grid">
+            <div class="mtabs" role="tablist" aria-label="Maatri.ai walkthrough" aria-orientation="vertical">
+              <button type="button" role="tab" id="mt-problem" aria-controls="mp-problem" aria-selected="true" class="mtab is-active"><span>Problem</span></button>
+              <button type="button" role="tab" id="mt-solution" aria-controls="mp-solution" aria-selected="false" tabindex="-1" class="mtab"><span>Solution</span></button>
+              <button type="button" role="tab" id="mt-tech" aria-controls="mp-tech" aria-selected="false" tabindex="-1" class="mtab"><span>Technology</span></button>
+              <button type="button" role="tab" id="mt-ui" aria-controls="mp-ui" aria-selected="false" tabindex="-1" class="mtab"><span>Interface</span></button>
+              <button type="button" role="tab" id="mt-purpose" aria-controls="mp-purpose" aria-selected="false" tabindex="-1" class="mtab"><span>Purpose</span></button>
+            </div>
+
+            <div class="mpanels">
+              <div class="mpanel is-active" role="tabpanel" id="mp-problem" aria-labelledby="mt-problem" tabindex="0">
+                <h4>Problem</h4>
+                <p>Maternal health risk is judged from a small set of routine readings. This prototype asks a practical question: can a trained model turn those readings into a clear Low, Mid or High risk level?</p>
+              </div>
+              <div class="mpanel" role="tabpanel" id="mp-solution" aria-labelledby="mt-solution" tabindex="0" hidden>
+                <h4>Solution</h4>
+                <p>A Flask web app wraps a trained Random Forest classifier. A user enters six health readings and gets a predicted risk level along with a probability for each category.</p>
+              </div>
+              <div class="mpanel" role="tabpanel" id="mp-tech" aria-labelledby="mt-tech" tabindex="0" hidden>
+                <h4>Technology</h4>
+                <p>Python and Flask serve the app. A Random Forest model with standardized features does the prediction. A JSON endpoint, <code>/api/predict</code>, allows programmatic access. The interface is plain HTML, CSS and JavaScript.</p>
+                <ul class="chips" aria-label="Technology"><li>Python</li><li>Flask</li><li>Machine learning</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              </div>
+              <div class="mpanel" role="tabpanel" id="mp-ui" aria-labelledby="mt-ui" tabindex="0" hidden>
+                <h4>Interface</h4>
+                <div class="mock" role="img" aria-label="Illustrative sketch of the form: six reading fields, a submit button, and three result categories.">
+                  <div class="mock__bar"><span></span><span></span><span></span><em>maatri.ai</em></div>
+                  <div class="mock__body">
+                    <div class="mock__fields">
+                      <div><label>Age</label><i></i></div>
+                      <div><label>Systolic BP</label><i></i></div>
+                      <div><label>Diastolic BP</label><i></i></div>
+                      <div><label>Blood sugar</label><i></i></div>
+                      <div><label>Body temperature</label><i></i></div>
+                      <div><label>Heart rate</label><i></i></div>
+                    </div>
+                    <div class="mock__btn">Get risk assessment</div>
+                    <div class="mock__result"><span>Low risk</span><span>Mid risk</span><span>High risk</span></div>
+                  </div>
+                </div>
+                <p class="mock__cap">Illustrative sketch of the form flow, not a screenshot.</p>
+              </div>
+              <div class="mpanel" role="tabpanel" id="mp-purpose" aria-labelledby="mt-purpose" tabindex="0" hidden>
+                <h4>Purpose</h4>
+                <p>A learning prototype for exploring how ML can support risk identification in healthcare workflows. It is for educational and research purposes only. It has not been clinically validated and is not a diagnostic tool.</p>
+                <a class="link-arrow" href="https://github.com/suryawanshianuj83-crypto/maatri.ai" target="_blank" rel="noopener noreferrer">View the repository <span class="arr" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION + STATUS ============ -->
+    <section class="section education" id="education" data-nav="education" aria-labelledby="edu-h">
+      <div class="wrap edu__grid">
+        <div>
+          <h2 class="display" id="edu-h">Education</h2>
+          <div class="edu" data-reveal>
+            <p class="edu__degree">BCA — Data Science</p>
+            <p class="edu__school">MIT-ADT University</p>
+            <p class="edu__meta">3rd year</p>
+            <p class="edu__minor"><span>Minor</span> Data Analytics</p>
+          </div>
+        </div>
+
+        <div class="status" data-reveal aria-label="Current status">
+          <div class="status__bar"><span class="dot dot--live" aria-hidden="true"></span><span>Status</span></div>
+          <dl class="status__list">
+            <div><dt>Studying</dt><dd>BCA Data Science</dd></div>
+            <div><dt>Minor</dt><dd>Data Analytics</dd></div>
+            <div><dt>Working</dt><dd>Data Analyst Intern @ Unified Mentor</dd></div>
+            <div><dt>Exploring</dt><dd>Neural Networks</dd></div>
+            <div><dt>Building</dt><dd>Data + AI Projects</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" data-nav="contact" aria-labelledby="contact-h">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <h2 class="contact__title" id="contact-h">
+          <span class="cl">Let's build</span>
+          <span class="cl">something useful.</span>
+        </h2>
+        <p class="contact__lede">Interested in data, AI, meaningful problems and building things that actually work.</p>
+        <div class="contact__cta">
+          <a class="btn btn--primary magnetic" href="mailto:suryawanshianuj83@gmail.com"><span class="btn__in">Email me <span class="arr" aria-hidden="true">→</span></span></a>
+          <a class="btn btn--ghost magnetic" href="https://github.com/suryawanshianuj83-crypto" target="_blank" rel="noopener noreferrer"><span class="btn__in">GitHub <span class="arr" aria-hidden="true">↗</span></span></a>
+          <a class="btn btn--ghost magnetic" href="https://www.linkedin.com/in/anuj-suryawanshi-263a70416" target="_blank" rel="noopener noreferrer"><span class="btn__in">LinkedIn <span class="arr" aria-hidden="true">↗</span></span></a>
+        </div>
+        <p class="contact__mail">Or write to <a href="mailto:suryawanshianuj83@gmail.com">suryawanshianuj83@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div>
+        <p class="footer__name">Anuj Suryawanshi</p>
+        <p class="footer__tag">Data Science × Analytics × AI</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="https://github.com/suryawanshianuj83-crypto" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/anuj-suryawanshi-263a70416" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:suryawanshianuj83@gmail.com">Email</a></li>
+      </ul>
+      <p class="footer__status"><span class="dot dot--live" aria-hidden="true"></span>Currently learning, building &amp; experimenting</p>
     </div>
+  </footer>
 
-    <!-- Hero Section -->
-    <section id="hero" class="fullscreen-section">
-        <div class="container hero-content">
-            <h1 class="hero-title hero-anim-1"><span class="gradient-text">Anuj Suryawanshi</span></h1>
-            <p class="hero-subtitle hero-anim-2">Figuring Out | Delusional</p>
-            <div class="hero-cta hero-anim-3">
-                <a href="#projects" class="btn btn-primary interactive-btn">Explore My Work <i class="fas fa-arrow-right"></i></a>
-                <a href="#contact" class="btn btn-outline interactive-btn">Let's Talk</a>
-            </div>
-            
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <p>Scroll to Explore</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container cinematic-reveal">
-            <h2 class="section-title">About Me</h2>
-            
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3 class="about-headline" style="margin-bottom: 30px;">I'm Anuj Suryawanshi.</h3>
-                    <p>I study Data Science and spend most of my time learning how technology works and building things with it.</p>
-                    <p>Right now I'm experimenting with ideas around AI and real-world problem solving. One of the things I'm building is <strong>Maatri.ai</strong> — a simple AI system designed to help mothers and ASHA workers access basic health guidance in regional languages.</p>
-                    <p>I'm still early in the journey. Mostly learning, building, breaking things, and trying to understand how technology can solve real problems.</p>
-                </div>
-                <div class="about-visual cinematic-reveal" style="transition-delay: 200ms;">
-                    <div class="glass-panel profile-panel">
-                        <div class="tech-circle">
-                            <img src="images/anuj.jpg" alt="Anuj Suryawanshi Profile" class="profile-img">
-                        </div>
-                        <div class="panel-info">
-                            <h4>Anuj Suryawanshi</h4>
-                            <p class="role-text">AI Developer</p>
-                            <div class="status-indicator">
-                                <span class="dot"></span> Building the Future
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container cinematic-reveal">
-            <h2 class="section-title">Skills</h2>
-            
-            <div class="dev-skills-grid">
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fab fa-python skill-icon"></i>
-                    <span>Python</span>
-                </div>
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fas fa-brain skill-icon"></i>
-                    <span>Machine Learning</span>
-                </div>
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fas fa-robot skill-icon"></i>
-                    <span>Artificial Intelligence</span>
-                </div>
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fas fa-database skill-icon"></i>
-                    <span>Data Science</span>
-                </div>
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fas fa-pepper-hot skill-icon"></i>
-                    <span>Flask</span>
-                </div>
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fas fa-laptop-code skill-icon"></i>
-                    <span>Web Development</span>
-                </div>
-                <div class="dev-skill-card glass-card cinematic-reveal">
-                    <i class="fas fa-puzzle-piece skill-icon"></i>
-                    <span>Problem Solving</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section gradient-bg">
-        <div class="container cinematic-reveal">
-            <h2 class="section-title">Education</h2>
-            
-            <div class="timeline-container">
-                <div class="timeline-card glass-card">
-                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
-                        <p class="timeline-subtitle text-primary">(Currently pursuing – Data Science)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container cinematic-reveal">
-            <h2 class="section-title">Projects</h2>
-            
-            <div class="projects-grid">
-                <!-- Featured Project -->
-                <div class="project-card glass-card featured-project" style="grid-column: 1 / -1; max-width: 900px; margin: 0 auto; overflow: hidden; padding: 0;">
-                    
-                    <div class="project-info">
-                        <div class="project-badge">AI / Healthcare Application</div>
-                        <h3 class="project-title">Maatri.ai</h3>
-                        <p class="project-desc">A localized, voice-enabled machine learning application (English, Hindi, Marathi) built to accurately assess maternal health risks in rural areas and provide preliminary, accessible guidance to Mothers and ASHA workers.</p>
-                        <div class="project-tags">
-                            <span>Flask</span>
-                            <span>Machine Learning</span>
-                            <span>Web Speech API</span>
-                            <span>Responsive Design</span>
-                        </div>
-                        <a href="https://github.com/suryawanshianuj83-crypto/maatri.ai" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container cinematic-reveal">
-            <h2 class="section-title">Contact</h2>
-            
-            <div class="contact-cards-container">
-                <h3 class="contact-headline text-center">Let's connect and build the future.</h3>
-                
-                <div class="contact-items">
-                    <a href="tel:8600347882" class="contact-item glass-card cinematic-reveal">
-                        <div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div>
-                        <div class="item-details">
-                            <h4>Phone</h4>
-                            <p>8600347882</p>
-                        </div>
-                    </a>
-                    
-                    <a href="mailto:suryawanshianuj83@gmail.com" class="contact-item glass-card cinematic-reveal">
-                        <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
-                        <div class="item-details">
-                            <h4>Email</h4>
-                            <p>suryawanshianuj83@gmail.com</p>
-                        </div>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/anuj-suryawanshi-373601370" target="_blank" class="contact-item glass-card cinematic-reveal">
-                        <div class="icon-wrapper"><i class="fab fa-linkedin-in"></i></div>
-                        <div class="item-details">
-                            <h4>LinkedIn</h4>
-                            <p>anuj-suryawanshi-373601370</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <p class="copyright">&copy; <span id="year"></span> Anuj Suryawanshi.</p>
-            <div class="footer-logo">ANUJ<span>.</span></div>
-        </div>
-    </footer>
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-follower"></div>
-
-    <!-- Music Toggle -->
-    <button id="music-toggle" class="music-toggle" aria-label="Toggle Background Music">
-        <i class="fas fa-music"></i>
-        <div class="music-waves">
-            <span></span><span></span><span></span>
-        </div>
-    </button>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <script src="js/hero-field.js" defer></script>
+  <script src="js/story.js" defer></script>
+  <script src="js/neural.js" defer></script>
+  <script src="js/skills.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
